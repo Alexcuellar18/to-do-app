@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1> Register to start your To Do List!</h1>
+<form action="/register" method='POST'>
+  <table>
+    <tbody>
+      <tr>
+        <td align="right"><label for='email'>Email</label></td>
+        <td align="left"><input type='text' name='email' value='{{email}}'></td>
+      </tr>
+      <tr>
+        <td align="right"><label for="password">Password</label></td>
+        <td align="left"><input type="password" name='password' value='{{password}}'></td>
+      </tr>
+      <tr>
+          <td align="right"><label for='verified'>Verify Password</label></td>
+          <td align="left"><input type='password' name='verified' value='{{verified}}'></td>
+        
+      </tr>
+      <tr>
+        <td>
+          <input type='submit'/>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+{% endblock %}
